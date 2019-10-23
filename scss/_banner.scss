@@ -1,0 +1,43 @@
+@import "_mixin";
+
+
+.Banner-image {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background: url("../assets/Images/mountainman.jpg") center;
+
+  .Banner-CTA{
+    @include for-phone-and-tablet {
+      display: flex;
+      flex-direction: column;
+    }
+
+    button{
+      @include for-phone-and-tablet {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+}
+
+.Banner-text {
+  position: absolute;
+  @include bannertext;
+  letter-spacing: 5.5px;
+
+  p{
+    font-family: sans-serif;
+  }
+  button {
+    @include button();
+  }
+  button:hover{
+    @include buttonhover();
+  }
+}

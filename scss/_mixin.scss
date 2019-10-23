@@ -1,0 +1,79 @@
+@import "_colors";
+@mixin titlefont {
+    margin-bottom: 3rem;
+    text-align: center;
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: 100;
+    font-size: 250%;
+}
+
+@mixin button {
+    background-color: $maincolor;
+    color: $textcolor;
+    padding: 0.5rem 1rem;
+    font-weight: 900;
+    font-size: medium;
+    border: 2px solid transparent;
+}
+
+@mixin buttonhover {
+    border: 2px solid white;
+    color: #004b8d;
+
+}
+
+@mixin allignment {
+    padding: 4rem 2rem;
+}
+
+@mixin bannertext {
+    text-align: center;
+    font-family: 'Alfa Slab One', cursive;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $primary;
+    font-weight: 100;
+  }
+
+  @mixin hover {
+    color: orange;
+}
+
+@mixin Left-Margin($leftmargin) {
+    margin-left: $leftmargin;
+}
+
+@mixin Right-Margin($Rightmargin) {
+    margin-right: $Rightmargin;
+}
+
+@mixin block-list($colorlink) {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        li {
+            float: left;
+
+            a {
+                display: flex;
+                color: $colorlink;
+                text-align: center;
+                padding: 12px 14px;
+                text-decoration: none;
+
+            }
+        }
+    }
+}
+
+@mixin for-phone-and-tablet {
+    @media screen and (min-width: 320px) and (max-width: 1024px){ @content; }
+}
+
+@mixin for-phone-and-tablet-landscape {
+    @media screen and (max-width: 1024px) and (orientation:landscape){ @content; }
+}
